@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ShellApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ShellApp"
+    Shell.FlyoutBehavior="Flyout">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="here comes page1 : " ContentTemplate="{DataTemplate local:NewPage1}"/>
+        <ShellContent Title="here comes page2 : " ContentTemplate="{DataTemplate local:NewPage2}"/>
+        <ShellContent Title="here comes page3 : " ContentTemplate="{DataTemplate local:NewPage3}"/>
+    </FlyoutItem>
+    <TabBar>
+        <Tab Title="Page1" Icon="dotnet_bot">
+            <ShellContent Title="here comes page1" ContentTemplate="{DataTemplate local:NewPage1}"/>
+        </Tab>
+        <Tab Title="Page1" Icon="dotnet_bot">
+            <ShellContent Title="here comes page2" ContentTemplate="{DataTemplate local:NewPage2}"/>
+        </Tab>
+        <Tab Title="Page1" Icon="dotnet_bot">
+            <ShellContent Title="here comes page3" ContentTemplate="{DataTemplate local:NewPage3}"/>
+        </Tab>
+    </TabBar>
+</Shell>
